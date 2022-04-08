@@ -9,9 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define NAV_L 1
-#define OTHER_L 2
+#define WSPC_L 2
 #define NUM_L 3
 #define SYM_L 4
+#define RMOD_L 5
+#define LMOD_L 6
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -33,23 +35,23 @@
 
         default_layer {
             bindings = <
-                &kp QUOT      &kp COMMA      &kp DOT       &kp P          &kp Y         &kp F            &kp G          &kp C       &kp R      &kp L
-                &hm LGUI A &hm LALT O &hm LCTRL E &hm LSHFT U    &kp I         &kp D            &hm RSHFT H    &hm RCTRL T &hm LALT N &hm LGUI S
-                &kp SEMI      &kp Q      &kp J       &kp K          &kp X         &kp B            &kp M          &kp W   &kp V    &kp Z
-                                                  &lt NAV_L TAB  &kp ENTER     &lt NUM_L SPACE  &lt SYM_L BKSP
+                &kp QUOT      &kp COMMA  &kp DOT     &kp P          &kp Y         &kp F            &kp G          &kp C       &kp R      &kp L
+                &kp A         &kp O      &hm E       &kp U          &kp I         &kp D            &kp H          &kp T       &kp N      &kp S
+                &kp SEMI      &kp Q      &kp J       &kp K          &kp X         &kp B            &kp M          &kp W       &kp V      &kp Z
+                                                     &mo NUM_L  &lt NAV_L SPC &sk LSHFT        &mo SYM_L
             >;
         };
 
         nav_layer {
             bindings = <
-                &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp LARW       &kp DARW    &kp UARW   &kp RARW
+                &trans     &trans     &trans      &trans          &trans       &kp TAB          &trans         &trans      &trans     &kp BSPC
+                &sk LSHIFT &sk LCTRL  &sk LALT    &sk LGUI        &kp ESC      &trans           &kp LARW       &kp DARW    &kp UARW   &kp RARW
                 &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &kp PG_DN   &kp PG_UP  &kp END
                                                   &trans          &trans       &kp ESC          &kp DEL
             >;
         };
 
-        other_layer {
+        workspace_layer {
             bindings = <
                 &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
                 &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
@@ -60,19 +62,19 @@
 
         num_layer {
             bindings = <
-                &kp LBKT   &kp N7     &kp N8      &kp N9          &kp RBKT      &trans          &trans         &trans      &trans     &trans
-                &kp SEMI   &kp N4     &kp N5      &kp N6          &kp EQUAL     &trans          &trans         &trans      &trans     &trans
-                &kp GRAVE  &kp N1     &kp N2      &kp N3          &kp BSLH      &trans          &trans         &trans      &trans     &trans
-                                                  &kp N0          &kp MINUS     &trans          &trans
+                &trans   &trans     &trans      &kp LBKT          &kp RBKT      &kp PLUS        &kp N7         &kp N8      &kp N9     &kp MINUS
+                &sk LSHIFT &sk LCTRL &sk LALT   &sk LGUI          &kp EQUAL     &kp DOT         &kp N4         &kp N5      &kp N6     &kp COLON
+                &trans   &trans     &trans      &trans            &kp BSLH      &kp STAR        &kp N1         &kp N2      &kp N3     &kp SLASH
+                                                  &kp N0          &kp MINUS     &kp N0          &to WSPC_L
             >;
         };
 
         sym_layer {
             bindings = <
                 &kp LBRC     &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp RBRC       &trans &trans   &trans    &trans    &trans
-                &kp COLON     &kp LS(N4)  &kp LS(N5)  &kp LS(N6) &kp PLUS       &trans &trans   &trans    &trans    &trans
+                &kp COLON     &kp LS(N4)  &kp LS(N5)  &kp LS(N6) &kp PLUS       &trans &sk RGUI   &sk RALT    &sk RCTRL    &sk RSHIFT
                 &kp TILDE     &kp LS(N1)  &kp LS(N2)  &kp LS(N3) &kp LS(BSLH)       &trans &trans   &trans    &trans    &trans
-                                                   &kp LS(N0) &kp UNDER   &trans &trans
+                                                   &kp LS(N0) &kp UNDER   &kp PIPE &trans
             >;
         };
     };
