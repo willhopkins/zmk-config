@@ -38,7 +38,7 @@
                 &kp QUOT      &kp COMMA  &kp DOT     &kp P          &kp Y         &kp F            &kp G          &kp C       &kp R      &kp L
                 &kp A         &kp O      &hm E       &kp U          &kp I         &kp D            &kp H          &kp T       &kp N      &kp S
                 &kp SEMI      &kp Q      &kp J       &kp K          &kp X         &kp B            &kp M          &kp W       &kp V      &kp Z
-                                                     &mo NUM_L  &lt NAV_L SPC &sk LSHFT        &mo SYM_L
+                                                     &mo NUM_L      &lt NAV_L SPC &sk LSHFT        &mo SYM_L
             >;
         };
 
@@ -71,10 +71,10 @@
 
         sym_layer {
             bindings = <
-                &kp LBRC     &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp RBRC       &trans &trans   &trans    &trans    &trans
+                &kp LBRC      &kp LS(N7)  &kp LS(N8)  &kp LS(N9) &kp RBRC       &trans &trans   &trans    &trans    &trans
                 &kp COLON     &kp LS(N4)  &kp LS(N5)  &kp LS(N6) &kp PLUS       &trans &sk RGUI   &sk RALT    &sk RCTRL    &sk RSHIFT
-                &kp TILDE     &kp LS(N1)  &kp LS(N2)  &kp LS(N3) &kp LS(BSLH)       &trans &trans   &trans    &trans    &trans
-                                                   &kp LS(N0) &kp UNDER   &kp PIPE &trans
+                &kp TILDE     &kp LS(N1)  &kp LS(N2)  &kp LS(N3) &kp LS(BSLH)   &trans &trans   &trans    &trans    &trans
+                                                      &kp LS(N0) &kp UNDER      &kp PIPE &trans
             >;
         };
     };
