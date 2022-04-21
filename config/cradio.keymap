@@ -55,7 +55,7 @@
             bindings = <
                 &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
                 &trans     &trans     &trans      &trans          &trans       &trans           &trans         &trans      &trans     &trans
-                &trans     &trans     &trans      &trans          &trans       &trans           &kp HOME       &trans      &trans     &trans
+                &trans     &trans     &bt BT_NXT  &bt BT_PRV      &trans       &trans           &trans         &trans      &trans     &trans
                                                   &trans          &trans       &trans           &trans
             >;
         };
